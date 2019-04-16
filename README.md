@@ -2,7 +2,7 @@
 
 [![TravisCI Status](https://api.travis-ci.com/rodeodomino/algo.svg?branch=master)](https://travis-ci.com/rodeodomino/algo/)
 
-This is a fork of @trailofbits amazing work with Algo, replacing their local dnsmasq ad blocking with Pi-hole.
+This is a fork of @trailofbits amazing work with Algo, replacing their local dnsmasq ad blocking with Pi-hole with @dan-v's Pi-hole code.
 
 In addition to installing Pi-hole, it:
 
