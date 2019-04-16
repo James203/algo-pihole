@@ -1,8 +1,29 @@
-# Algo VPN
+# Algo VPN - Pihole Fork
+
+[![TravisCI Status](https://api.travis-ci.com/rodeodomino/algo.svg?branch=master)](https://travis-ci.com/rodeodomino/algo/)
+
+This is a fork of @trailofbits amazing work with Algo, replacing their local dnsmasq ad blocking with Pi-hole with @dan-v's Pi-hole code.
+
+In addition to installing Pi-hole, it:
+
+* Automatically sets up @mmotti's [Fetch Filter Lists](https://github.com/mmotti/pihole-filter-lists) and [Gravity Optimise](https://github.com/mmotti/pihole-gravity-optimise) scripts
+* Checks for Pi-hole updates
+* Includes a prebuilt whitelist, blacklist, regex, and adlist (available for you to edit) based off of @WaLLy3K and @mmoti's work.
+* Creates extra users for full-tunneling and split-tunneling
+* Includes a new port to try to guard against VPN blocking
+
+For split tunnel, simply replace `0.0.0.0/0, ::0/0` with `172.16.0.1/24, fcaa::1/64` for the `AllowedIPs` in the Wireguard .conf file.
+
+Split tunnel caveats:
+
+* This appears to work, but I need your help to confirm.
+* I would like to automate the .conf file generation to track for a word in the user name and adjust the AllowedIPs accordingly (e.g., user phone-full would have AllowedIPs of 0.0.0.0/0 while phone-pihole would have 172.16.0.1/24). If you know how to do that, please let me know.
+* I cannot figure out how to do this for IPSEC, so only working on Wireguard for now.
+
+----------------
 
 [![Join the chat at https://gitter.im/trailofbits/algo](https://badges.gitter.im/trailofbits/algo.svg)](https://gitter.im/trailofbits/algo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label=Follow%20%40AlgoVPN)](https://twitter.com/AlgoVPN)
-[![TravisCI Status](https://api.travis-ci.org/trailofbits/algo.svg?branch=master)](https://travis-ci.org/trailofbits/algo)
 
 Algo VPN is a set of Ansible scripts that simplify the setup of a personal IPSEC and Wireguard VPN. It uses the most secure defaults available, works with common cloud providers, and does not require client software on most devices. See our [release announcement](https://blog.trailofbits.com/2016/12/12/meet-algo-the-vpn-that-works/) for more information.
 
