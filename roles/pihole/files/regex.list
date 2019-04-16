@@ -17,7 +17,6 @@
 ^stat(s|istics)?[0-9]*[-.]
 ^telemetry[-.]
 ^track(ers?|ing)?[0-9]*[-.]
-.*\.g00\..*
 ^traff(ic)?[-.]
 (^|\.)iadsdk\.apple\.com$
 (^|\.)omtrdc\.net$
