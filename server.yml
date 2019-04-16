@@ -17,11 +17,6 @@
         tags: dns_encryption
 
       - import_role:
-          name: dns_adblocking
-        when: algo_local_dns
-        tags: dns_adblocking
-
-      - import_role:
           name: wireguard
         when: wireguard_enabled
         tags: wireguard
@@ -35,6 +30,11 @@
           name: ssh_tunneling
         when: algo_ssh_tunneling
         tags: ssh_tunneling
+
+      - import_role:
+          name: pihole
+        when: algo_local_dns
+        tags: dns_adblocking
 
       - block:
         - name: Dump the configuration
