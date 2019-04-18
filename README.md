@@ -12,7 +12,7 @@ In addition to installing Pi-hole, it:
 * Creates extra users for full-tunneling and split-tunneling
 * Includes a new port to try to guard against VPN blocking
 
-For split tunnel, simply replace `0.0.0.0/0, ::0/0` with `172.16.0.1/24, fcaa::1/64` for the `AllowedIPs` in the Wireguard .conf file.
+For split tunnel, simply replace `0.0.0.0/0, ::0/0` with `172.16.0.1/24, 10.19.49.1/24, fcaa::1/64, fd9d:bc11:4021::1/48` for the `AllowedIPs` in the Wireguard .conf file.
 
 Split tunnel caveats:
 
