@@ -64,7 +64,7 @@
       cron:
         name: "Restart pihole-FTL"
         special_time: reboot
-        job: "/usr/sbin/service pihole-FTL restart"
+        job: "sleep 5 && /usr/sbin/service pihole-FTL restart"
 
   rescue:
     - debug: var=fail_hint
