@@ -1,6 +1,6 @@
 # Algo VPN - Pihole Fork
 
-[![TravisCI Status](https://api.travis-ci.com/rodeodomino/algo.svg?branch=master)](https://travis-ci.com/rodeodomino/algo/)
+[![Build Status](https://travis-ci.com/rodeodomino/algo-pihole.svg?branch=master)](https://travis-ci.com/rodeodomino/algo-pihole)
 
 This is a fork of @trailofbits amazing work with Algo, replacing their local dnsmasq ad blocking with Pi-hole with @dan-v's Pi-hole code.
 
