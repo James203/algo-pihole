@@ -65,7 +65,6 @@
         name: "Restart pihole-FTL"
         special_time: reboot
         job: "sleep 5 && /usr/sbin/service pihole-FTL restart"
-
   rescue:
     - include_tasks: playbooks/rescue.yml
 
