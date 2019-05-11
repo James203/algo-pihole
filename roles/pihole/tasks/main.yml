@@ -46,7 +46,7 @@
       include_tasks: listrestore.yml
 
     - name: Install pihole
-      shell: "~/install-pihole.sh --unattended"
+      command: "~/install-pihole.sh --unattended"
       register: dbg_install_pihole
 
     - name: Pihole | Create wildcard scripts
@@ -65,12 +65,8 @@
         name: "Restart pihole-FTL"
         special_time: reboot
         job: "sleep 5 && /usr/sbin/service pihole-FTL restart"
-
   rescue:
-    - debug: var=fail_hint
-      tags: always
-    - fail:
-      tags: always
+    - include_tasks: playbooks/rescue.yml
 
 
 - name: Set timezone to America/New_York
