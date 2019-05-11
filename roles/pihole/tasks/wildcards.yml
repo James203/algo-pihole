@@ -34,9 +34,9 @@
       user: root
 
   - name: Run fetchFilterLists
-    shell: "/usr/local/bin/fetchFilterLists.sh"
+    command: "/usr/local/bin/fetchFilterLists.sh"
     register: dbg_fetch_filters
 
   - name: Run gravityOptimise
-    shell: "/usr/local/bin/gravityOptimise.sh"
-    register: dbg_fetch_filters
+    command: "/usr/local/bin/gravityOptimise.sh"
+    register: dbg_gravity_optimise
